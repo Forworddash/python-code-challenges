@@ -448,5 +448,47 @@ def max_of_two_numbers(num1, num2):
     else: 
         return num1
 
-max_of_two_numbers(34, 4)
+# max_of_two_numbers(34, 4)
+
+import math
+
+def is_prime(int1):
+    if int1 < 2:
+        return False
+
+    for i in range(2, int(math.sqrt(int1)) + 1):
+        if int1 % i == 0:
+            return False
+        
+    return True
+# is_prime(5)
+
+# fizzbuzz
+def fizz_buzz():
+    for i in range(1, 101):
+        if i % 3 == 0 and i % 5 == 0:
+            print("FizzBuzz")
+        elif i % 3 == 0:
+            print("Fizz")
+        elif i % 5 == 0:
+            print("Buzz")
+        else:
+            print(i)
+# fizz_buzz()
+
+# word frequency
+def word_frequency(str):
+
+    words = str.split()
+    dict1 = {}
+    # for i in words:
+        
+    for i in words:
+        dict1 += i 
+
+
+
+    print(dict1)
+
+word_frequency('this is a string')
 
