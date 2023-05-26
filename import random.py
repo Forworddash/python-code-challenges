@@ -586,4 +586,85 @@ def reverse_words(str1):
 
     print(reversed_words)
 
-reverse_words('Hello World')
+# reverse_words('Hello World')
+
+# unique elements
+def unique_elements(list1):
+    unique_list = []
+    seen = set()
+
+    for element in list1:
+        if element not in seen:
+            unique_list.append(element)
+            seen.add(element)
+    print(unique_list)
+
+# unique_elements([4, 3, 6, 7, 7, 1])
+
+def unique_elements(list1):
+    new_list = []
+    seen_dict = set()
+
+    for i in list1:
+        if i not in seen_dict:
+            new_list.append(i)
+            seen_dict.add(i)
+    print(new_list)
+# unique_elements([1, 1, 1, 5, 2, 2, 4])
+# common elements
+def common_elements(list1, list2):
+    common_nums = []
+
+    for i in list1:
+        if i in list2:
+            common_nums.append(i)
+    return common_nums
+
+# common_elements([1, 4, 5], [1, 2, 5, 5, 3])
+# palindrome
+def is_palindrome(str1):
+    reversed_string = str1[::-1]
+
+    if reversed_string == str1:
+        return True
+    else:
+        return False
+
+# is_palindrome('alisla')
+#count vowels
+def count_vowels(str1):
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    vowel_count = 0
+
+    for i in str1:
+        if i in vowels:
+            vowel_count += 1
+
+    return vowel_count
+# count_vowels('alice')
+# find duplicates
+def find_duplicates(list1):
+    new_list = []
+    duplicates = []
+
+    for i in list1:
+        if i not in new_list:
+            new_list.append(i)
+        elif i in new_list:
+            duplicates.append(i)
+
+    print(new_list)
+    print(duplicates)
+
+# find_duplicates([1, 4, 2, 2, 3, 4, 5])
+# anagram better
+def is_anagram(str1, str2):
+    sorted_string_1 = sorted(str1.lower())
+    sorted_string_2 = sorted(str2.lower())
+
+    if sorted_string_1 == sorted_string_2:
+        return True
+    else:
+        return False
+
+# is_anagram('test', 'estt')
