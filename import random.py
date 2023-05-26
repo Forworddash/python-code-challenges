@@ -496,4 +496,61 @@ def sum_of_squares(n):
             return False
     return sum
 
-sum_of_squares(4)
+# sum_of_squares(4)
+
+# compressed string
+def compress_string(str1):
+    
+    count = ''
+    
+    for i in str1:
+        if i not in count:
+            count += i
+            count += str((str1.count(i)))
+    if len(count) < len(str1):
+        print(count)
+    else: 
+        print(str1)    
+
+
+# compress_string('aaabbbs')
+# updated one 
+def compress_string(str1):
+    compressed = '' # initialize variable 'compressed' with empty string
+    count = 1 # initialize variable 'count' to 1
+
+    for i in range(len(str1)): # for loop from 1 > 7 (length of string)
+        if i == len(str1) - 1 or str1[i] != str1[i + 1]: # if i is 6 or i does not equal the next i 
+            compressed += str1[i] + str(count) # add i + number to 'compressed' variable
+            count = 1 # set current i count to 1
+        else:
+            count += 1 # set current i count to num of i's
+
+    if len(compressed) < len(str1): # print the shortest string between str1 & compressed
+        print(compressed) 
+    else:
+        print(str1) 
+
+# compress_string('aaabbbs')
+# sentence reversal
+# def reverse_sentence(str1):
+    # reversed_words = str1[::-1]
+    # print(reversed_words)
+# reverse_sentence('this is a sentence')
+def reverse_sentence(str1):
+    words = str1.split()
+    reversed_words = [word[::-1] for word in words]
+    reversed_sentence = ' '.join(reversed_words)
+    print(reversed_sentence)
+
+# reverse_sentence('this is a test')
+# has unique characters
+def has_unique_characters(str1):
+    no_duplicates = set(str1)
+    if len(str1) > len(no_duplicates):
+        return False
+    else:
+        return True
+
+# has_unique_characters('abcdee')
+
