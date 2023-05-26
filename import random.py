@@ -553,4 +553,37 @@ def has_unique_characters(str1):
         return True
 
 # has_unique_characters('abcdee')
+# anagram check
+def is_anagram(str1, str2):
+    #string_one = [str1]
+    #string_two = [str2]
+    anagram = 0
 
+    for i in str1:
+        if i in str2:
+            anagram += 1
+        else:
+            print('False')
+    print(anagram)
+    if anagram == len(str1):
+        print('anagram detected')
+    else:
+        print('anagram not detected')
+
+    print(anagram)
+
+# is_anagram('silent', 'listen')
+# reverse words
+def reverse_words(str1):
+
+    words = str1.split()
+    reversed_words = ''
+
+    for word in words:
+        reversed_words += word[::-1] + ' '
+
+    reversed_words = reversed_words.strip()
+
+    print(reversed_words)
+
+reverse_words('Hello World')
