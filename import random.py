@@ -479,16 +479,21 @@ def fizz_buzz():
 # word frequency
 def word_frequency(str):
 
-    words = str.split()
-    dict1 = {}
-    # for i in words:
-        
-    for i in words:
-        dict1 += i 
+    words = str.split() # split letters into words
+    
 
+# word_frequency('this is a string')
 
+# sum of squares
+def sum_of_squares(n):
 
-    print(dict1)
+    sum = 0
 
-word_frequency('this is a string')
+    for i in range(1, n + 1):      
+        if n >= 0:
+            sum += pow(i, 2)
+        else:
+            return False
+    return sum
 
+sum_of_squares(4)
