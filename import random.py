@@ -668,3 +668,69 @@ def is_anagram(str1, str2):
         return False
 
 # is_anagram('test', 'estt')
+# remove duplicates
+def remove_duplicates(list1):
+    dict1 = set(list1)
+    no_duplicates = list(dict1)
+
+    return no_duplicates
+# remove_duplicates([1, 1, 2, 2, 3, 3])
+# find missing number
+def find_missing_number(list1):
+# first find sum of number 1 to n (n * (n + 1)) / 2
+    n = list1[-1]
+    result = (int((n * (n + 1)) / 2) - sum(list1))
+
+    return result
+
+# find_missing_number([1, 2, 3, 4, 6])
+# max subarray
+def max_subarray_sum(arr):
+    n = len(arr) # n = 9 (length of list of nums)
+    maxSum = -1e8 # ?
+    currSum = 0
+
+    for i in range(0, n): # for i in range (0 to 9)
+        currSum = currSum + arr[i] # current sum = current sum + current i (-4)
+        if (currSum > maxSum): # if current sum is smaller than the max, then set max to current
+            maxSum = currSum
+        if (currSum < 0): # if current sum is less than 0, set current sum to 0
+            currSum = 0
+
+    return maxSum
+
+
+# max_subarray_sum([-4, -3, -2, -1, 0, 1, 2, 3, 4])
+# find duplicates
+def find_duplicates(arr):
+    new_list = []
+    duplicates = []
+
+    for i in arr:
+        if i not in new_list:
+            new_list.append(i)
+        else:
+            duplicates.append(i)
+
+    return duplicates
+# find_duplicates([1, 2, 3, 4, 4, 5])
+# is pangram 
+def is_pangram(str1):
+
+    letters = set(c.lower() for c in str1 if c.isalpha())
+
+    if len(letters) == 26:
+        return True
+    else:
+        return False
+
+
+# is_pangram('The quick brown fox jumps over the lazy dog')
+# average list
+def average_list(list1):
+    new_list = float(sum(list1) / len(list1))
+    
+    return new_list
+
+
+average_list([1, 3, 3, 4, 4])
