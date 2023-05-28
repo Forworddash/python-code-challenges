@@ -733,4 +733,42 @@ def average_list(list1):
     return new_list
 
 
-average_list([1, 3, 3, 4, 4])
+# average_list([1, 3, 3, 4, 4])
+# fizzbuzz
+def fizz_buzz():
+    for i in range(1, 101):
+        if i % 3 == 0 and i % 5 == 0:
+            print('FizzBuzz')
+        elif i % 3 == 0:
+            print('fizz')
+        elif i % 5 == 0:
+            print('Buzz')
+        else:
+            print(i)
+
+# fizz_buzz()
+# prime number checker #math.sqrt(4)
+def is_prime(int1):
+    square_root = int(math.sqrt(int1))
+
+    if int1 < 2:
+        return False
+
+    for i in range(2, square_root + 1):
+        if int1 % i == 0:
+            return False
+        else:
+            return True
+# is_prime(60)
+# anagram
+def is_anagram(str1, str2):
+
+    sorted_string_1 = sorted(str1.lower())
+    sorted_string_2 = sorted(str2.lower())
+
+    if sorted_string_1 == sorted_string_2:
+        return True
+    else:
+        return False
+
+is_anagram('silent', 'listen')
