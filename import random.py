@@ -771,4 +771,18 @@ def is_anagram(str1, str2):
     else:
         return False
 
-is_anagram('silent', 'listen')
+# is_anagram('silent', 'listen')
+# duplicate element finder
+def duplicate_element(list1):
+
+    new_list = []
+    duplicates = []
+
+    for i in list1:
+        if i not in new_list:
+            new_list.append(i)
+        else:
+            duplicates.append(i)
+
+    return duplicates
+duplicate_element([1, 2, 3, 3, 4, 5])
