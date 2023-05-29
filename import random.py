@@ -785,4 +785,32 @@ def duplicate_element(list1):
             duplicates.append(i)
 
     return duplicates
-duplicate_element([1, 2, 3, 3, 4, 5])
+# duplicate_element([1, 2, 3, 3, 4, 5])
+# map game
+def map_game():
+    map = [
+        [0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0],
+    ]
+
+    bad_sectors = random.randint(1, 36)
+
+
+    for i in range(len(map)):
+        for j in range(len(map[i])):
+            map[i][j] = random.randint(0, 1)
+            
+            
+        
+            
+            # if map[i][j] == bad_sectors:
+            #     print('#', end="")
+            # else:
+            #     print(' ', end='')
+        # print()
+    print(bad_sectors)
+map_game()
