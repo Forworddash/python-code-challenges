@@ -787,33 +787,34 @@ def duplicate_element(list1):
     return duplicates
 # duplicate_element([1, 2, 3, 3, 4, 5])
 # map game
-def map_game():
-    map = [
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-    ]
+# def map_game():
+#     map = [
+#         [0, 0, 0, 0, 0, 0],
+#         [0, 0, 0, 0, 0, 0],
+#         [0, 0, 0, 4, 0, 0],
+#         [0, 0, 0, 0, 0, 0],
+#         [0, 0, 0, 0, 0, 0],
+#         [0, 0, 0, 0, 0, 0],
+#     ]
 
-    bad_sectors = random.randint(1, 36)
+#     bad_sectors = random.randint(1, 36)
 
 
-    for i in range(len(map)):
-        for j in range(len(map[i])):
-            map[i][j] = random.randint(0, 1)
-            
-            
-        
-            
+#     for i in range(len(map)):
+#         for j in range(len(map[i])):
+#             # map[i][j] = random.randint(0, 1)
+#             if map[i][j] == 4:
+#                 print("#", end="")
+#             else:
+#                 print(" ", end="")
+#         print()
             # if map[i][j] == bad_sectors:
             #     print('#', end="")
             # else:
             #     print(' ', end='')
         # print()
-    print(bad_sectors)
-map_game()
+    # print(bad_sectors)
+# map_game()
 
 def french_to_english_chars(string):
     # Create a dictionary of French characters and their English equivalents
