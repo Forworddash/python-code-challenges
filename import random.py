@@ -814,3 +814,23 @@ def map_game():
         # print()
     print(bad_sectors)
 map_game()
+
+def french_to_english_chars(string):
+    # Create a dictionary of French characters and their English equivalents
+    french_chars = {
+        "à": "a", "â": "a", "ç": "c", "è": "e", "é": "e", "ê": "e", "ë": "e", "î": "i", "ï": "i", "ô": "o", "ù": "u", "û": "u", "ü": "u", "ÿ": "y",
+    }
+
+    for char in string:
+        if char in french_chars:
+            string = string.replace(char, french_chars[char])
+
+    return string
+french_to_english_chars("é")
+
+
+
+random_string = "Div of Sonepàr Canada"
+print(random_string)
+# now pass the random string through the function
+french_to_english_chars(random_string)
